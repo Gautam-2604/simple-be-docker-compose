@@ -9,7 +9,7 @@ RUN npm install
 
 COPY . .
 
-ENV DATABASE_URL=postgresql://postgres:mysecretpass@localhost:51214/postgres
+ENV DATABASE_URL=postgresql://postgres:mysecretpass@postgres:51214/postgres
 
 RUN npx prisma migrate dev
 RUN npx prisma generate
